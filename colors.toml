@@ -1,0 +1,89 @@
+# Frosted Signal — a cold-glass night palette.
+#
+# Field:  deep indigo night, never pure black; every dark value keeps a blue
+#         cast, like light through frosted glass.
+# Warm:   amber, burnt orange, rust — the only heat in the frame, always
+#         muted behind the frost.
+# Signal: the acid-green marker. Reserved for what the system is telling you.
+#
+# Semantic roles are the source of truth; color0-color15 mirror them for
+# compatibility with older Omarchy integrations.
+mode = "dark"
+
+accent = "#A8BE4A"
+hyprland_active_border = "rgba(a8be4aee) rgba(6e72c6ee) 90deg"
+hyprland_inactive_border = "rgba(2b3068aa)"
+
+bg = "#0B0E20"
+dark_bg = "#080A1A"
+darker_bg = "#05060F"
+lighter_bg = "#171B38"
+selection = "#272B5E"
+muted = "#6E70A8"
+muted_text = "#7B7DB4"
+dark_fg = "#A6A28E"
+fg = "#DCD4BC"
+light_fg = "#EDE6D2"
+bright_fg = "#FBFBF4"
+
+# Canonical Omarchy names mirror the compact Aether aliases above so current
+# templates resolve these authored shades instead of deriving fallbacks.
+dark_background = "#080A1A"
+darker_background = "#05060F"
+lighter_background = "#171B38"
+dark_foreground = "#A6A28E"
+light_foreground = "#EDE6D2"
+bright_foreground = "#FBFBF4"
+
+# Semantic states are drawn from the palette's own two temperatures — warm
+# and cold — rather than a generic red/green/blue spread.
+red = "#C85234"       # error / destructive / fault
+green = "#8CAE3E"     # success / clean
+yellow = "#E6B14A"    # warning / caution / search
+blue = "#6E72C6"      # keywords held cool / structure
+magenta = "#8B67C0"   # control flow / secondary accent
+cyan = "#7FA3DC"      # information / links / hints
+orange = "#E07B2C"    # action / changed / pending
+brown = "#8A4A2A"     # deprecated / embedded / special
+
+error = "#C85234"
+error_text = "#E4703F"
+success = "#8CAE3E"
+warning = "#E6B14A"
+info = "#7FA3DC"
+action = "#E07B2C"
+link = "#7FA3DC"
+
+bright_red = "#E4703F"
+bright_green = "#BFD45C"
+bright_yellow = "#F6D26C"
+bright_blue = "#8A8EDE"
+bright_magenta = "#AC8AE0"
+bright_cyan = "#A5C4F0"
+
+# Explicit UI decisions.
+background = "#0B0E20"
+foreground = "#DCD4BC"
+cursor = "#F6D26C"
+selection_foreground = "#FBFBF4"
+selection_background = "#272B5E"
+active_border_color = "#A8BE4A"
+active_tab_background = "#272B5E"
+
+# Legacy aliases used by older templates and third-party hooks.
+color0 = "#0B0E20"
+color1 = "#C85234"
+color2 = "#8CAE3E"
+color3 = "#E6B14A"
+color4 = "#6E72C6"
+color5 = "#8B67C0"
+color6 = "#7FA3DC"
+color7 = "#DCD4BC"
+color8 = "#6E70A8"
+color9 = "#E4703F"
+color10 = "#BFD45C"
+color11 = "#F6D26C"
+color12 = "#8A8EDE"
+color13 = "#AC8AE0"
+color14 = "#A5C4F0"
+color15 = "#FBFBF4"

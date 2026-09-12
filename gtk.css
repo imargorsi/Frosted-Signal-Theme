@@ -1,0 +1,262 @@
+/**
+ * Frosted Signal — GTK
+ *
+ * GTK3/GTK4 Adwaita overrides. The film's surfaces are traced rather than
+ * machined, so the geometry here keeps a soft radius; what carries the theme
+ * is the indigo field, the bone type on it, and the single acid-green marker
+ * that follows focus and selection wherever it goes.
+ */
+
+/* Material palette */
+@define-color background #0B0E20;
+@define-color surface #171B38;
+@define-color surface_raised #1E2348;
+@define-color foreground #DCD4BC;
+@define-color accent #A8BE4A;
+@define-color selection #272B5E;
+
+@define-color black #0B0E20;
+@define-color red #C85234;
+@define-color green #8CAE3E;
+@define-color yellow #E6B14A;
+@define-color blue #6E72C6;
+@define-color magenta #8B67C0;
+@define-color cyan #7FA3DC;
+@define-color white #DCD4BC;
+@define-color bright_black #6E70A8;
+@define-color bright_red #E4703F;
+@define-color bright_green #BFD45C;
+@define-color bright_yellow #F6D26C;
+@define-color bright_blue #8A8EDE;
+@define-color bright_magenta #AC8AE0;
+@define-color bright_cyan #A5C4F0;
+@define-color bright_white #FBFBF4;
+
+/* Adwaita color overrides */
+@define-color accent_bg_color @accent;
+@define-color accent_fg_color @background;
+@define-color accent_color @accent;
+
+@define-color window_bg_color @background;
+@define-color window_fg_color @foreground;
+
+@define-color view_bg_color @black;
+@define-color view_fg_color @foreground;
+@define-color sidebar_bg_color @surface;
+@define-color sidebar_fg_color @foreground;
+@define-color sidebar_backdrop_color @background;
+@define-color sidebar_shade_color alpha(#05060F, 0.46);
+
+@define-color headerbar_bg_color @surface;
+@define-color headerbar_fg_color @foreground;
+@define-color headerbar_backdrop_color @background;
+@define-color headerbar_shade_color alpha(#05060F, 0.52);
+@define-color card_bg_color @surface;
+@define-color card_fg_color @foreground;
+
+@define-color popover_bg_color @surface_raised;
+@define-color popover_fg_color @foreground;
+
+@define-color destructive_bg_color @red;
+@define-color destructive_fg_color @bright_white;
+
+@define-color success_bg_color @green;
+@define-color success_fg_color @background;
+
+@define-color warning_bg_color @yellow;
+@define-color warning_fg_color @background;
+
+@define-color error_bg_color @red;
+@define-color error_fg_color @bright_white;
+
+@define-color dialog_bg_color @surface;
+@define-color dialog_fg_color @foreground;
+
+@define-color borders alpha(@bright_black, 0.40);
+
+/* GTK3 Adwaita legacy variables */
+@define-color theme_fg_color @foreground;
+@define-color theme_text_color @foreground;
+@define-color theme_bg_color @background;
+@define-color theme_base_color @black;
+@define-color theme_selected_bg_color @selection;
+@define-color theme_selected_fg_color @bright_white;
+@define-color insensitive_bg_color @background;
+@define-color insensitive_fg_color @bright_black;
+@define-color insensitive_base_color @black;
+@define-color theme_unfocused_fg_color @foreground;
+@define-color theme_unfocused_text_color @foreground;
+@define-color theme_unfocused_bg_color @background;
+@define-color theme_unfocused_base_color @black;
+@define-color theme_unfocused_selected_bg_color @selection;
+@define-color theme_unfocused_selected_fg_color @bright_white;
+@define-color unfocused_insensitive_color @bright_black;
+@define-color unfocused_borders alpha(@foreground, 0.1);
+@define-color warning_color @yellow;
+@define-color error_color @red;
+@define-color success_color @green;
+@define-color destructive_color @red;
+
+/* Content views */
+@define-color content_view_bg @black;
+@define-color text_view_bg @black;
+
+/* GtkMessageDialog */
+messagedialog {
+    background-color: @dialog_bg_color;
+}
+
+messagedialog label {
+    color: @dialog_fg_color;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+messagedialog .secondary-text {
+    font-size: 10pt;
+    font-style: italic;
+}
+
+messagedialog button {
+    background-color: @surface_raised;
+    color: @foreground;
+    border: 1px solid @bright_black;
+    padding: 10px;
+}
+
+messagedialog button:hover {
+    background-color: @accent;
+    color: @background;
+}
+
+banner revealer widget {
+    background: @selection;
+    padding: 5px;
+    color: @bright_white;
+}
+
+/* GtkAlertDialog */
+alertdialog.background {
+    background-color: @dialog_bg_color;
+    color: @dialog_fg_color;
+}
+
+alertdialog .titlebar {
+    background-color: @headerbar_bg_color;
+    color: @headerbar_fg_color;
+}
+
+alertdialog box {
+    background-color: @dialog_bg_color;
+}
+
+alertdialog label {
+    color: @dialog_fg_color;
+}
+
+filechooser .dialog-action-box {
+    border-top: 1px solid alpha(@bright_black, 0.5);
+}
+
+filechooser .dialog-action-box:backdrop {
+    border-top-color: @black;
+}
+
+filechooser #pathbarbox {
+    border-bottom: 1px solid alpha(@bright_black, 0.5);
+}
+
+filechooserbutton:drop(active) {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+toast {
+    background-color: @surface_raised;
+    color: @foreground;
+}
+
+/* Nautilus */
+headerbar {
+    background-color: @headerbar_bg_color;
+    border-bottom: 1px solid alpha(@accent, 0.20);
+}
+
+headerbar button:hover,
+headerbar button:checked {
+    background-color: @selection;
+}
+
+.nautilus-pathbar {
+    min-height: 37px;
+    background-color: @background;
+}
+
+.navigation-sidebar {
+    background-color: @sidebar_bg_color;
+    border-right: 1px solid alpha(@accent, 0.16);
+}
+
+.navigation-sidebar row:hover {
+    background-color: alpha(@selection, 0.62);
+}
+
+/* Selection is always marked with the title green, never with a fill alone —
+   the same rule the bar, the launcher and the window border follow. */
+.navigation-sidebar row:selected {
+    background-color: @selection;
+    color: @bright_white;
+    box-shadow: inset 3px 0 @accent;
+}
+
+.navigation-sidebar separator {
+    background-color: alpha(@bright_black, 0.22);
+}
+
+.nautilus-grid-view gridview,
+.nautilus-list-view columnview > listview {
+    padding-top: 5px;
+}
+
+.nautilus-grid-view gridview > child.activatable:hover {
+    background-color: alpha(@selection, 0.52);
+}
+
+.nautilus-grid-view gridview > child:selected {
+    background-color: @selection;
+}
+
+.nautilus-list-view columnview > listview > row.activatable:hover {
+    background-color: alpha(@selection, 0.52);
+}
+
+.nautilus-list-view columnview > listview > row:selected {
+    background-color: @selection;
+    box-shadow: inset 3px 0 @accent;
+}
+
+rubberband {
+    background-color: alpha(@selection, 0.52);
+    border: 1px solid @accent;
+}
+
+toast button.circular.flat.image-button:hover {
+    color: @bright_white;
+    background-color: @red;
+}
+
+/* Traced corners, matching the compositor's 10px window rounding. */
+window,
+popover > contents,
+.card,
+messagedialog,
+alertdialog.background {
+    border-radius: 10px;
+}
+
+button,
+entry,
+.osd,
+toast {
+    border-radius: 7px;
+}

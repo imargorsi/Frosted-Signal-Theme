@@ -1,0 +1,36 @@
+system: "base24"
+name: "Frosted Signal"
+slug: "frosted-signal"
+author: "craigderington"
+variant: "dark"
+
+palette:
+  # --- the venetian night ---
+  base00: "#0B0E20" # Night Blinds   - default background
+  base01: "#171B38" # Slat Shadow    - lighter background
+  base02: "#272B5E" # Scramble Field - selection background
+  base03: "#6E70A8" # Blind Haze     - comments / muted text
+  base04: "#A6A28E" # Worn Bone      - dark foreground
+  base05: "#DCD4BC" # Bone           - default foreground
+  base06: "#EDE6D2" # Pale Card      - light foreground
+  base07: "#FBFBF4" # Poster White   - brightest foreground
+
+  # --- interpolated bodies / the acid signal ---
+  base08: "#C85234" # Fault Rust     - red / error
+  base09: "#E07B2C" # Substance      - orange / action
+  base0A: "#E6B14A" # Face Amber     - yellow / warning
+  base0B: "#8CAE3E" # New Path       - green / success
+  base0C: "#7FA3DC" # Slat Light     - cyan / information
+  base0D: "#6E72C6" # Venetian       - blue / structure
+  base0E: "#8B67C0" # Scramble Suit  - purple / keywords
+  base0F: "#8A4A2A" # Oxide          - brown / special
+
+  # --- base24 extension ---
+  base10: "#080A1A" # Deep Night     - darker background
+  base11: "#05060F" # Blackout       - darkest background
+  base12: "#E4703F" # Flare          - bright red
+  base13: "#F6D26C" # Beacon Amber   - bright yellow
+  base14: "#BFD45C" # Title Green    - bright green
+  base15: "#A5C4F0" # Pane Glare     - bright cyan
+  base16: "#8A8EDE" # Periwinkle     - bright blue
+  base17: "#AC8AE0" # Lilac Shard    - bright purple

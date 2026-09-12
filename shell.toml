@@ -1,0 +1,148 @@
+# Frosted Signal shell surfaces.
+#
+# The bar and its popups are frosted glass: translucent, blurred, carrying
+# bone lettering and one signal color for whatever currently has focus.
+# Warmth is deliberately absent up here — the heat in this theme belongs to
+# content, not to chrome.
+
+[bar]
+background = "#0B0E20"
+background-alpha = 0.35
+text = "#EDE6D2"
+active = "#A8BE4A"
+scale-with-font = true
+size-horizontal = 30
+size-vertical = 32
+
+[hyprland]
+active-border = "rgba(a8be4add) rgba(e6b14acc) rgba(6e72c6dd) 90deg"
+active-border-foreground = "rgba(bfd45cee) rgba(f6d26cdd) rgba(8a8edeee) 90deg"
+
+[controls]
+normal-color = "#DCD4BC"
+normal-fill-alpha = 0.05
+normal-border = "#6E70A8"
+normal-border-width = 1
+normal-border-alpha = 0.50
+hover-cursor-color = "#EDE6D2"
+hover-cursor-fill-alpha = 0.11
+hover-cursor-border = "#7FA3DC"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.70
+focus-color = "#FBFBF4"
+focus-fill-alpha = 0.12
+focus-border = "accent"
+focus-border-width = 1
+focus-border-alpha = 0.92
+selected-color = "#FBFBF4"
+selected-fill-alpha = 0.18
+selected-border = "accent"
+selected-border-width = 1
+selected-border-alpha = 0.85
+pressed-fill-alpha = 0.22
+selection-fill-alpha = 0.32
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+control-gap = 9
+control-padding-x = 14
+control-padding-y = 9
+control-height = 36
+popup-row-height = 38
+row-gap = 8
+row-padding-x = 16
+panel-gap = 14
+panel-padding = 20
+popup-padding = 18
+
+[font]
+base-size = 13
+
+[popups]
+background = "#0B0E20"
+background-alpha = 0.90
+text = "#EDE6D2"
+border = "hyprland.active-border"
+border-alpha = 0.88
+border-width = 2
+
+[tooltip]
+background = "#232A56"
+background-alpha = 0.97
+text = "#FBFBF4"
+border = "#6E70A8"
+border-alpha = 0.62
+
+[notifications]
+background = "#0B0E20"
+background-alpha = 0.50
+text = "#EDE6D2"
+border = "hyprland.active-border"
+border-alpha = 0.90
+border-width = 2
+countdown = "#A8BE4A"
+
+[launcher]
+background = "#0B0E20"
+background-alpha = 0.90
+text = "#DCD4BC"
+border = "hyprland.active-border"
+border-alpha = 0.92
+scrim = "#05060F"
+scrim-alpha = 0.02
+selected-background = "transparent"
+selected-background-alpha = 0
+selected-text = "#FBFBF4"
+selected-border = "hyprland.active-border"
+selected-border-alpha = 0.92
+selected-border-width = 2
+
+[menu]
+background = "#0B0E20"
+background-alpha = 0.90
+text = "#DCD4BC"
+border = "hyprland.active-border"
+border-alpha = 0.88
+scrim = "#05060F"
+scrim-alpha = 0.02
+selected-background = "transparent"
+selected-background-alpha = 0
+selected-text = "#FBFBF4"
+selected-border = "hyprland.active-border"
+selected-border-alpha = 0.92
+selected-border-width = 2
+
+[polkit]
+background = "#0B0E20"
+background-alpha = 0.55
+text = "#EDE6D2"
+text-error = "#E4703F"
+border = "hyprland.active-border"
+border-error = "#C85234"
+border-alpha = 0.92
+scrim = "#05060F"
+scrim-alpha = 0.74
+accent = "#A8BE4A"
+
+[lock]
+background = "#0B0E20"
+background-alpha = 0.55
+text = "#EDE6D2"
+placeholder = "#8A8CC4"
+text-error = "#E4703F"
+border = "#6E70A8"
+border-active = "#A8BE4A"
+border-error = "#C85234"
+border-alpha = 0.94
+selection = "#272B5E"
+selection-alpha = 0.50
+
+[image-picker]
+scrim = "#05060F"
+scrim-alpha = 0.74
+text = "#DCD4BC"
+selected-border = "#A8BE4A"
+selected-border-alpha = 1.0
+unselected-border = "#6E70A8"
+unselected-border-alpha = 0.55
