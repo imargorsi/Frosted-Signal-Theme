@@ -1,5 +1,7 @@
 # Frosted Signal — an Omarchy theme
 
+![Frosted Signal preview](preview.png)
+
 A dark, glassy Omarchy theme: deep indigo night, frosted translucent surfaces
 everywhere a panel or popup appears, and one signal color — acid green,
 shifting through amber into indigo — reserved for whatever currently has
