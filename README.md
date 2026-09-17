@@ -9,17 +9,9 @@ focus. Nothing is red until something has actually gone wrong.
 
 ## Install
 
-This is a personal, locally-authored theme. To use it on another machine,
-copy this directory into `~/.config/omarchy/themes/` and apply it:
-
 ```bash
-cp -r frosted-signal ~/.config/omarchy/themes/
-omarchy theme set frosted-signal
+omarchy theme install https://github.com/imargorsi/Frosted-Signal-Theme
 ```
-
-A theme you place yourself under `~/.config/omarchy/themes/` is unrestricted
-— nothing gets stripped or regenerated, unlike a theme pulled down with
-`omarchy theme install`.
 
 ## What's included
 
