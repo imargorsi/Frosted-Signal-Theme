@@ -7,16 +7,70 @@ everywhere a panel or popup appears, and one signal color — acid green,
 shifting through amber into indigo — reserved for whatever currently has
 focus. Nothing is red until something has actually gone wrong.
 
+## Requirements
+
+- Omarchy 4.0+
+
 ## Install
 
 ```bash
 omarchy theme install https://github.com/imargorsi/Frosted-Signal-Theme
 ```
 
+## Screenshots
+
+Real desktop captures running Frosted Signal — the frosted blur, the signal
+border, and the coordinated app surfaces.
+
+| | |
+|---|---|
+| [![Desktop](screenshots/01-desktop.jpg)](screenshots/01-desktop.jpg) | [![btop](screenshots/02-btop.jpg)](screenshots/02-btop.jpg) |
+| **Desktop** | **btop — system monitor** |
+| [![Launcher](screenshots/03-launcher.jpg)](screenshots/03-launcher.jpg) | [![Files + terminal](screenshots/04-files-terminal.jpg)](screenshots/04-files-terminal.jpg) |
+| **Launcher menu** | **Files + terminal** |
+| [![Wallpaper switcher](screenshots/05-wallpaper-switcher.jpg)](screenshots/05-wallpaper-switcher.jpg) | [![Neofetch + VPN panel](screenshots/06-neofetch-vpn.jpg)](screenshots/06-neofetch-vpn.jpg) |
+| **Wallpaper switcher** | **Neofetch + VPN panel** |
+
+Click any screenshot to view it full size.
+
+## Wallpapers
+
+[`backgrounds/`](backgrounds/) holds the theme's wallpaper set — not a fixed
+curated set, but a folder you keep adding to. Drop any `.jpg`/`.jpeg`/`.png`/
+`.gif`/`.bmp`/`.webp` in there (or in the per-machine overlay at
+`~/.config/omarchy/backgrounds/frosted-signal/`, which survives a theme
+refresh) and it's picked up automatically — no re-registration needed.
+
+Six wallpapers currently ship with the theme. Click any of them to view it
+full size.
+
+| | |
+|---|---|
+| [![Neon Getaway](backgrounds/thumbs/1.jpg)](backgrounds/1.jpg) | [![Crimson Signal](backgrounds/thumbs/2.jpg)](backgrounds/2.jpg) |
+| **01 · Neon Getaway** | **02 · Crimson Signal** |
+| [![Broadcast City](backgrounds/thumbs/3.jpg)](backgrounds/3.jpg) | [![Frost Pagoda](backgrounds/thumbs/4.jpg)](backgrounds/4.jpg) |
+| **03 · Broadcast City** | **04 · Frost Pagoda** |
+| [![Hidden Valley](backgrounds/thumbs/5.jpg)](backgrounds/5.jpg) | [![Quiet Lane](backgrounds/thumbs/6.jpg)](backgrounds/6.png) |
+| **05 · Hidden Valley** | **06 · Quiet Lane** |
+
+**Automatic rotation:** a systemd user timer
+(`omarchy-wallpaper-rotate.timer`) calls `omarchy theme bg next` once an
+hour, cycling through every image in `backgrounds/` in sorted order and
+wrapping back to the start. Check on it or change the interval:
+
+```bash
+systemctl --user status omarchy-wallpaper-rotate.timer
+systemctl --user edit omarchy-wallpaper-rotate.timer   # change OnUnitActiveSec
+systemctl --user stop omarchy-wallpaper-rotate.timer    # pause rotation
+```
+
+Cycle manually any time with `omarchy theme bg next`, or pick a specific
+image with `omarchy theme bg set <path>`.
+
 ## What's included
 
 - **A growing wallpaper collection** in `backgrounds/` — glass/abstract art,
-  sci-fi key art, and a few classics, rotated automatically (see below)
+  sci-fi key art, and a few classics, rotated automatically (see above)
 - **A Hyprland 0.55+ Lua treatment**: 10 px soft rounding, a frosted blur,
   interpolated motion curves, and a three-stop green → amber → indigo border
   that rotates continuously on the focused window
@@ -50,28 +104,6 @@ omarchy theme install https://github.com/imargorsi/Frosted-Signal-Theme
 
 Semantic roles in `colors.toml` are the source of truth; `color0`–`color15`
 mirror them for older integrations.
-
-## Wallpapers
-
-[`backgrounds/`](backgrounds/) holds the theme's wallpaper set — not a fixed
-curated set, but a folder you keep adding to. Drop any `.jpg`/`.jpeg`/`.png`/
-`.gif`/`.bmp`/`.webp` in there (or in the per-machine overlay at
-`~/.config/omarchy/backgrounds/frosted-signal/`, which survives a theme
-refresh) and it's picked up automatically — no re-registration needed.
-
-**Automatic rotation:** a systemd user timer
-(`omarchy-wallpaper-rotate.timer`) calls `omarchy theme bg next` once an
-hour, cycling through every image in `backgrounds/` in sorted order and
-wrapping back to the start. Check on it or change the interval:
-
-```bash
-systemctl --user status omarchy-wallpaper-rotate.timer
-systemctl --user edit omarchy-wallpaper-rotate.timer   # change OnUnitActiveSec
-systemctl --user stop omarchy-wallpaper-rotate.timer    # pause rotation
-```
-
-Cycle manually any time with `omarchy theme bg next`, or pick a specific
-image with `omarchy theme bg set <path>`.
 
 ## Integration notes
 
